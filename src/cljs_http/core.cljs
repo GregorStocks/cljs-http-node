@@ -71,7 +71,7 @@
         content-length (or (when body (.-length body)) 0)
         _ (prn content-length)
         headers (util/build-headers (assoc headers "content-length" content-length))
-        js-request (->node-req (assoc request :headers headers))
+        js-request (->node-req (assoc request :headers headers :server-port (if (= (:scheme request) :https) 443 80)))
         scheme (if (= (:scheme request) :https)
                  https
                  http)
@@ -98,6 +98,6 @@
 
     (doto client
       (.on "error" (fn [error]
-                     (.log js/console (str "Error in request: " error))))
+                     (.log js/console (str "Dammit! Error in request: " error request))))
       (.end))
     response-ch))

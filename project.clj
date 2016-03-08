@@ -1,4 +1,4 @@
-(defproject cljs-http-node "0.1.19-SNAPSHOT"
+(defproject cljs-http-node "0.1.19-GREGOR"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
