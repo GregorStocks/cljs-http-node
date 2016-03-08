@@ -1,6 +1,6 @@
-(defproject cljs-http-node "0.1.19-GREGOR"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+(defproject gregor-stocks/cljs-http-node "0.1.19-SNAPSHOT"
+  :description "cljs-http, but extremely out of date and it runs on node"
+  :url "http://github.com/GregorStocks/cljs-http-node"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2311"]
